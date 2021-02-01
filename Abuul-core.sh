@@ -72,6 +72,8 @@ done
 
 paste ${INFILE} ${RAND}_CONSEQUENCE.txt > ${OUTFILE}
 
+
+cp ${RAND}_DB.txt DB.txt
 rm ${RAND}_*
 
 
