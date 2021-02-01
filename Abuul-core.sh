@@ -32,36 +32,36 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 	if grep ^"${INDEX}," ${RAND}_DB.txt 1> /dev/null 2>&1; then
 		WC=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | wc -l`
                 if [ "${WC}" == "1" ]; then
-			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | cut -f 10 -d ','`
-			ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-			CONSEQUENCE=[ALLELE:${ALLELE}_CONSEQUENCE:${CONSEQUENCE_TMP}]
+			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+			#ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
+			CONSEQUENCE=[CONSEQUENCE:${CONSEQUENCE_TMP}]
                 fi 
 		if [ "${WC}" == "2" ]; then
-			FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-			FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 10 -d ','`
-			SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-			SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 10 -d ','`
-			CONSEQUENCE=[ALLELE:${FIRST_ALLELE}_CONSEQUENCE:${FIRST_CONSEQUENCE}]_[ALLELE:${SECOND_ALLELE}_CONSEQUENCE:${SECOND_CONSEQUENCE}]
+			#FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
+			FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+			#SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
+			SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}]
 		fi
 		if [ "${WC}" == "3" ]; then
-                        FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 10 -d ','`
-                        SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 10 -d ','`
-                        THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
-                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 10 -d ','`
-			CONSEQUENCE=[ALLELE:${FIRST_ALLELE}_CONSEQUENCE:${FIRST_CONSEQUENCE}]_ALLELE:${SECOND_ALLELE}_CONSEQUENCE:${SECOND_CONSEQUENCE}_ALLELE:${THIRD_ALLELE}_CONSEQUENCE:${THIRD_CONSEQUENCE}]
+                        #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
+                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+                        #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
+                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+                        #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
+                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -3 | tail -1`
+			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}_CONSEQUENCE:${THIRD_CONSEQUENCE}]
 		fi
                 if [ "${WC}" == "4" ]; then
-                        FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 10 -d ','`
-                        SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 10 -d ','`
-                        THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
-                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 10 -d ','`
-			FOURTH_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -4 | tail -1 | cut -f 4 -d ','`
-                        FOURTH_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -4 | tail -1 | cut -f 10 -d ','`
-			CONSEQUENCE=[ALLELE:${FIRST_ALLELE}_CONSEQUENCE:${FIRST_CONSEQUENCE}]_ALLELE:${SECOND_ALLELE}_CONSEQUENCE:${SECOND_CONSEQUENCE}_ALLELE:${THIRD_ALLELE}_CONSEQUENCE:${THIRD_CONSEQUENCE}_ALLELE:${FOURTH_ALLELE}_CONSEQUENCE:${FOURTH_CONSEQUENCE}]
+                        #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
+                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+                        #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
+                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+                        #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
+                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -3 | tail -1`
+			#FOURTH_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -4 | tail -1 | cut -f 4 -d ','`
+                        FOURTH_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -4 | tail -1`
+			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}_CONSEQUENCE:${THIRD_CONSEQUENCE}_CONSEQUENCE:${FOURTH_CONSEQUENCE}]
                 fi
 
 	else
