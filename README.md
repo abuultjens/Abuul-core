@@ -10,23 +10,23 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 # Example
 
 ### run snippy
-``snippy --outdir isolate_1 --ref ref.gbk --R1 isolate_1_R1.fq.gz --R2 isolate_1_R2.fq.gz  
-snippy --outdir isolate_2 --ref ref.gbk --R1 isolate_2_R1.fq.gz --R2 isolate_2_R2.fq.gz  
-snippy --outdir isolate_3 --ref ref.gbk --R1 isolate_3_R1.fq.gz --R2 isolate_3_R2.fq.gz``
+``snippy --outdir isolate_1 --ref ref.gbk --R1 isolate_1_R1.fq.gz --R2 isolate_1_R2.fq.gz``  
+``snippy --outdir isolate_2 --ref ref.gbk --R1 isolate_2_R1.fq.gz --R2 isolate_2_R2.fq.gz``  
+``snippy --outdir isolate_3 --ref ref.gbk --R1 isolate_3_R1.fq.gz --R2 isolate_3_R2.fq.gz``
 
 ### run snippy-core
-``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``
-``$ head test.tab``
-``CHR     POS     REF     isolate_1        isolate_2        isolate_3``
-``ref 6458    G       G       T       T``
-``ref 6459    A       A       T       T``
-``ref 156753  C       C       T       T``
-``ref 183077  G       G       A       A``
-``ref 189748  T       G       G       G``
-``ref 206613  C       C       T       T``
-``ref 217723  C       C       A       A``
-``ref 232690  G       G       A       A``
-``ref 272901  C       G       G       G``
+``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``  
+``$ head test.tab``  
+``CHR     POS     REF     isolate_1        isolate_2        isolate_3``  
+``ref 6458    G       G       T       T``  
+``ref 6459    A       A       T       T``  
+``ref 156753  C       C       T       T``  
+``ref 183077  G       G       A       A``  
+``ref 189748  T       G       G       G``  
+``ref 206613  C       C       T       T``  
+``ref 217723  C       C       A       A``  
+``ref 232690  G       G       A       A``  
+``ref 272901  C       G       G       G``  
 
 ### run Abuul-core
 ``sh Abuul-core.sh test.tab test_consequences.tab``  
