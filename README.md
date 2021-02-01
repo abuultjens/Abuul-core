@@ -16,17 +16,17 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 
 ### run snippy-core
 ``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``  
-``$ head test.tab``  
-``CHR     POS     REF     isolate_1        isolate_2        isolate_3``  
-``ref 6458    G       G       T       T``  
-``ref 6459    A       A       T       T``  
-``ref 156753  C       C       T       T``  
-``ref 183077  G       G       A       A``  
-``ref 189748  T       G       G       G``  
-``ref 206613  C       C       T       T``  
-``ref 217723  C       C       A       A``  
-``ref 232690  G       G       A       A``  
-``ref 272901  C       G       G       G``  
+``$ column -t test.tab | head``  
+``CHR         POS      REF  U6164036  U8294222  U9052080``  
+``ref     6458     G    G         T         T``  
+``ref     6459     A    A         T         T``  
+``ref     156753   C    C         T         T``  
+``ref     183077   G    G         A         A``  
+``ref     189748   T    G         G         G``  
+``ref     206613   C    C         T         T``  
+``ref     217723   C    C         A         A``  
+``ref     232690   G    G         A         A``  
+``ref     272901   C    G         G         G``  
 
 ### run Abuul-core
 ``sh Abuul-core.sh test.tab test_consequences.tab``  
