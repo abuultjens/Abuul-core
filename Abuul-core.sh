@@ -9,12 +9,14 @@ RAND_2=`echo $((100 + RANDOM % 200))`
 RAND_3=`echo $((200 + RANDOM % 300))`
 RAND=`echo "${RAND_1}${RAND_2}${RAND_3}"`
 
+echo "Making index"
 # make ele_pos index from snps.tab file
 tail -n +2 ${INFILE} | cut -f 1-2 | tr '\t' '_' > ${RAND}_INDEX.txt
 
 # make list of isolates in snps.tab file
 head -1 ${INFILE} | cut -f 4- | tr '\t' '\n' > ${RAND}_isolates_list.txt
 
+echo "Making database"
 # make db from snps.tab from each isolate folder
 for ISOLATE in $(cat ${RAND}_isolates_list.txt); do
 	tail -n +2 ${ISOLATE}/snps.csv | cut -f 1-2 -d ',' | tr ',' '_' >> ${RAND}_index_tmp.txt
@@ -25,6 +27,7 @@ paste ${RAND}_index_tmp.txt ${RAND}_db_tmp.txt | tr '\t' ',' > ${RAND}_DB.txt
 # write header to CONSEQUENCE file
 echo "NUMBER_OF_CONSEQUENCES	CONSEQUENCE" > ${RAND}_CONSEQUENCE.txt
 
+echo "Fetching consequences from database"
 for INDEX in $(cat ${RAND}_INDEX.txt); do
 	if grep "${INDEX}" ${RAND}_DB.txt 1> /dev/null 2>&1; then
 		WC=`grep "${INDEX}" ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | wc -l`
