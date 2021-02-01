@@ -5,6 +5,6 @@ Provides SNP consequences for core.tab file
 ``git clone https://github.com/abuultjens/Abuul-core.git``
 
 ### run the script
-``sh Abuul-core.sh [core.tab] [outfile.tab]``
+``sh Abuul-core.sh [core.tab] [core_with_consequences.tab]``
 
 
