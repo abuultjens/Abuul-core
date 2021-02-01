@@ -37,7 +37,7 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 		
 		# if number of consequences is one
                 if [ "${WC}" == "1" ]; then
-			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
 			#ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
 			CONSEQUENCE=[CONSEQUENCE:${CONSEQUENCE_TMP}]
                 fi 
@@ -45,33 +45,33 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 		# if number of consequences is two
 		if [ "${WC}" == "2" ]; then
 			#FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-			FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+			FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
 			#SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-			SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+			SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -2 | tail -1`
 			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}]
 		fi
 		
 		# if number of consequences is three
 		if [ "${WC}" == "3" ]; then
                         #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
                         #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -2 | tail -1`
                         #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
-                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -3 | tail -1`
+                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -3 | tail -1`
 			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}_CONSEQUENCE:${THIRD_CONSEQUENCE}]
 		fi
 		
 		# if number of consequences is four
                 if [ "${WC}" == "4" ]; then
                         #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
-                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -1 | tail -1`
+                        FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
                         #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
-                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -2 | tail -1`
+                        SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -2 | tail -1`
                         #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
-                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -3 | tail -1`
+                        THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -3 | tail -1`
 			#FOURTH_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -4 | tail -1 | cut -f 4 -d ','`
-                        FOURTH_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10 -d ',' | sort | uniq | head -4 | tail -1`
+                        FOURTH_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -4 | tail -1`
 			CONSEQUENCE=[CONSEQUENCE:${FIRST_CONSEQUENCE}]_CONSEQUENCE:${SECOND_CONSEQUENCE}_CONSEQUENCE:${THIRD_CONSEQUENCE}_CONSEQUENCE:${FOURTH_CONSEQUENCE}]
                 fi
 	
