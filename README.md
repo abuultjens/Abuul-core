@@ -30,18 +30,18 @@ ref 272901  C       G       G       G``
 
 ### run Abuul-core
 ``
-sh Abuul-core.sh test.tab test_consequences.tab
-$ head test_consequences.tab
-CHR     POS     REF     U6164036        U8294222        U9052080        NUMBER_OF_CONSEQUENCES  CONSEQUENCE
-aus0085 6458    G       G       T       T       1       +       [CONSEQUENCE:missense_variant c.251_252delGAinsTT p.Arg84Ile]
-aus0085 6459    A       A       T       T       1       +       VARIANT_NOT_FOUND_IN_snps.csv
-aus0085 156753  C       C       T       T       1       -       [CONSEQUENCE:missense_variant c.1028G>A p.Ser343Asn]
-aus0085 183077  G       G       A       A       1               [CONSEQUENCE:]
-aus0085 189748  T       G       G       G       1               [CONSEQUENCE:]
-aus0085 206613  C       C       T       T       1       +       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val]
-aus0085 217723  C       C       A       A       1       -       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe]
-aus0085 232690  G       G       A       A       1       -       [CONSEQUENCE:synonymous_variant c.720C>T p.Ile240Ile]
-aus0085 272901  C       G       G       G       1       +       [CONSEQUENCE:missense_variant c.346C>G p.Leu116Val]
+        sh Abuul-core.sh test.tab test_consequences.tab
+        $ head test_consequences.tab
+        CHR     POS     REF     U6164036        U8294222        U9052080        NUMBER_OF_CONSEQUENCES  CONSEQUENCE
+        aus0085 6458    G       G       T       T       1       +       [CONSEQUENCE:missense_variant c.251_252delGAinsTT p.Arg84Ile]
+        aus0085 6459    A       A       T       T       1       +       VARIANT_NOT_FOUND_IN_snps.csv
+        aus0085 156753  C       C       T       T       1       -       [CONSEQUENCE:missense_variant c.1028G>A p.Ser343Asn]
+        aus0085 183077  G       G       A       A       1               [CONSEQUENCE:]
+        aus0085 189748  T       G       G       G       1               [CONSEQUENCE:]
+        aus0085 206613  C       C       T       T       1       +       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val]
+        aus0085 217723  C       C       A       A       1       -       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe]
+        aus0085 232690  G       G       A       A       1       -       [CONSEQUENCE:synonymous_variant c.720C>T p.Ile240Ile]
+        aus0085 272901  C       G       G       G       1       +       [CONSEQUENCE:missense_variant c.346C>G p.Leu116Val]
 ``
 
 ## Clipping reads  
