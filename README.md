@@ -44,5 +44,24 @@ aus0085 232690  G       G       A       A       1       -       [CONSEQUENCE:syn
 aus0085 272901  C       G       G       G       1       +       [CONSEQUENCE:missense_variant c.346C>G p.Leu116Val]
 ``
 
+## Clipping reads  
+``#!/bin/bash
 
+#fofn-checker
+
+ADAPTERS="/home/linuxbrew/cellar/trimmomatic/0.38/share/trimmomatic/adapters/NexteraPE-PE.fa"
+
+for TAXA in $(cat $1); do
+
+        R1=`grep ^"${TAXA}," 129_read_paths.csv | cut -f 2 -d ','`
+        R2=`grep ^"${TAXA}," 129_read_paths.csv | cut -f 3 -d ','`
+        
+
+       	trimmomatic PE -threads 10 "$R1" "$R2" \
+                        "${TAXA}_clipped_R1.fq.gz" /dev/null "${TAXA}_clipped_R2.fq.gz" /dev/null \
+                        ILLUMINACLIP:${ADAPTERS}:1:30:11 \
+                        LEADING:20 \
+                        TRAILING:20 \
+        
+done``  
 
