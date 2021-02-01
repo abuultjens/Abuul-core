@@ -1,7 +1,7 @@
 #!/bin/bash
 
-INFILE=test.tab
-OUTFILE=out.tab
+INFILE=${1}
+OUTFILE=${2}
 
 # generate random prefix for all tmp files
 RAND_1=`echo $((1 + RANDOM % 100))`
