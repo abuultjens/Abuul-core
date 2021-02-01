@@ -1,5 +1,5 @@
 # Abuul-core
-Provides SNP consequences for core.tab file
+Provides SNP consequences for the core.tab file from snippy-core
 
 ### get the code
 ``git clone https://github.com/abuultjens/Abuul-core.git``
