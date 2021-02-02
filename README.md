@@ -16,6 +16,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 
 ### run snippy-core
 ``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``  
+
 ``$ head test.tab``  
 ``CHR     POS     REF     U6164036        U8294222        U9052080``  
 ``aus0085 6458    G       G       T       T``  
@@ -32,6 +33,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 
 ### run Abuul-core
 ``sh Abuul-core.sh test.tab test_consequences.tab``  
+
 ``$ head test_consequences.tab ``  
 ``CHR     POS     REF     U6164036        U8294222        U9052080        NUMBER_OF_CONSEQUENCES  CONSEQUENCE``  
 ``aus0085 6458    G       G       T       T       1       [CONSEQUENCE:missense_variant c.251_252delGAinsTT p.Arg84Ile,aus0085_chr_p1-6.fna_00006]``  
