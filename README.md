@@ -7,6 +7,10 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ### run the script
 ``sh Abuul-core.sh [core.tab] [core_with_consequences.tab]``
 
+##### arguments: 
+``core.tab`` tsv outfile from snippy-core  
+``core_with_consequences.tab`` outfile from Abuul-core  
+
 # Example
 
 ### run snippy
