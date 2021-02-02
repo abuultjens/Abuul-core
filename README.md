@@ -40,7 +40,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``aus0085 206613  C       C       T       T       1       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val,aus0085_chr_p1-6.fna_00205]``  
 ``aus0085 217723  C       C       A       A       1       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe,aus0085_chr_p1-6.fna_00217]``  
 ``aus0085 232690  G       G       A       A       1       [CONSEQUENCE:synonymous_variant c.720C>T p.Ile240Ile,aus0085_chr_p1-6.fna_00233]``  
-``aus0085 533743  T       T       C       C       2       [CONSEQUENCE:synonymous_variant c.60T>C p.Cys20Cys]_CONSEQUENCE:synonymous_variant c.60_67delTGGAGCACinsCGGAGCAT p.24]``  
+``aus0085 533743  T       T       C       C       2       [CONSEQUENCE:synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513]_CONSEQUENCE:synonymous_variant c.60_67delTGGAGCACinsCGGAGCAT p.24,aus0085_chr_p1-6.fna_00513]``  
 
 
 
