@@ -26,7 +26,9 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``aus0085 206613  C       C       T       T``  
 ``aus0085 217723  C       C       A       A``  
 ``aus0085 232690  G       G       A       A``  
-``aus0085 533743  T       T       C       C``  
+``aus0085 533743  T       G       C       C``  
+
+* Note that position 533,743 has two alternative alleles (G and C).
 
 ### run Abuul-core
 ``sh Abuul-core.sh test.tab test_consequences.tab``  
@@ -40,8 +42,8 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``aus0085 206613  C       C       T       T       1       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val,aus0085_chr_p1-6.fna_00205]``  
 ``aus0085 217723  C       C       A       A       1       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe,aus0085_chr_p1-6.fna_00217]``  
 ``aus0085 232690  G       G       A       A       1       [CONSEQUENCE:synonymous_variant c.720C>T p.Ile240Ile,aus0085_chr_p1-6.fna_00233]``  
-``aus0085 533743  T       T       C       C       2       1:[synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513,,putative membrane protein]_2:[synonymous_variant c.60_67delTGGAGCACinsCGGAGCAT p.24,aus0085_chr_p1-6.fna_00513,,putative membrane protein]``  
+``aus0085 533743  T       G       C       C       2       1:[synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513,,putative membrane protein]_2:[CONSEQUENCE:missense_variant c.60T>G p.Cys20Trp,aus0085_chr_p1-6.fna_00513,,putative membrane protein]``  
 
-* Note that position 533743
+* Note that position 533,743 is reported with two consequences depending on the allele.
 
 
