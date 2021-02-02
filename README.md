@@ -50,7 +50,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``ref 232690  G       G       A       A       1       ALLELE-1:[synonymous_variant c.720C>T p.Ile240Ile,aus0085_chr_p1-6.fna_00233]``  
 ``ref 533743  T       G       C       C       2       ALLELE-1:[synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513,,putative membrane protein]_ALLELE-2:[missense_variant c.60T>G p.Cys20Trp,aus0085_chr_p1-6.fna_00513,,putative membrane protein]`` 
 
-* Note that position 533,743 is reported with two consequences depending on the allele.
+* Note that position 533,743 is reported with two consequences, one for each allele.
 
 * Some SNP positions that are listed in the snippy-core tsv and csv outfiles don't feature in the snps.csv files in the individual snippy output dirs. In these instances 'VARIANT_NOT_FOUND_IN_snps.csv' is reported in the consequences column (Eg. position 6459).
 
