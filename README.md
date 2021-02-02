@@ -1,5 +1,5 @@
 # Abuul-core
-Provides SNP consequences for the core.tab file from snippy-core. Consequences are derived from the snps.csv files inside the snippy isolate folders and is added to the snippy-core tab file as an additional column. If there are multiple SNP alleles with different consequences then the column will report the multiple  consequences. This script must be run in the snippy workspace dir.
+Provides SNP consequences for the core.tab file from snippy-core. Consequences are derived from the snps.csv files inside the snippy isolate folders and are added to the snippy-core tab file as an additional column. If there are multiple SNP alleles with different consequences then the column will report the multiple  consequences. This script must be run in the snippy workspace dir.
 
 ### get the code
 ``$ git clone https://github.com/abuultjens/Abuul-core.git``
