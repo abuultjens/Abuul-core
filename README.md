@@ -21,17 +21,17 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ### run snippy-core
 ``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``  
 
-``$ head test.tab``  
-``CHR     POS     REF     isolate_1        isolate_2        isolate_3``  
-``ref 6458    G       G       T       T``  
-``ref 6459    A       A       T       T``  
-``ref 156753  C       C       T       T``  
-``ref 183077  G       G       A       A``  
-``ref 189748  T       G       G       G``  
-``ref 206613  C       C       T       T``  
-``ref 217723  C       C       A       A``  
-``ref 232690  G       G       A       A``  
-``ref 533743  T       G       C       C``  
+    $ head test.tab  
+    CHR     POS     REF     isolate_1        isolate_2        isolate_3  
+    ref 6458    G       G       T       T  
+    ref 6459    A       A       T       T  
+    ref 156753  C       C       T       T  
+    ref 183077  G       G       A       A  
+    ref 189748  T       G       G       G  
+    ref 206613  C       C       T       T  
+    ref 217723  C       C       A       A  
+    ref 232690  G       G       A       A  
+    ref 533743  T       G       C       C  
 
 * Note that position 533,743 has two alternative alleles (G and C).
 
