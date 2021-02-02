@@ -48,7 +48,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``ref 206613  C       C       T       T       1       ALLELE-1:[missense_variant c.860C>T p.Ala287Val,aus0085_chr_p1-6.fna_00205]``  
 ``ref 217723  C       C       A       A       1       ALLELE-1:[missense_variant c.859G>T p.Val287Phe,aus0085_chr_p1-6.fna_00217]``  
 ``ref 232690  G       G       A       A       1       ALLELE-1:[synonymous_variant c.720C>T p.Ile240Ile,aus0085_chr_p1-6.fna_00233]``  
-``ref 533743  T       G       C       C       2       ALLELE-1:[synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513,,putative membrane protein]_ALLELE-2:[CONSEQUENCE:missense_variant c.60T>G p.Cys20Trp,aus0085_chr_p1-6.fna_00513,,putative membrane protein]`` 
+``ref 533743  T       G       C       C       2       ALLELE-1:[synonymous_variant c.60T>C p.Cys20Cys,aus0085_chr_p1-6.fna_00513,,putative membrane protein]_ALLELE-2:[missense_variant c.60T>G p.Cys20Trp,aus0085_chr_p1-6.fna_00513,,putative membrane protein]`` 
 
 * Note that position 533,743 is reported with two consequences depending on the allele.
 
