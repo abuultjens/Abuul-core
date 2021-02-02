@@ -5,7 +5,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ``$ git clone https://github.com/abuultjens/Abuul-core.git``
 
 ### run the script
-``$ sh Abuul-core.sh [core.tab] [core_with_consequences.tab]``
+``$ sh Abuul-core/Abuul-core.sh [core.tab] [core_with_consequences.tab]``
 
 ##### arguments: 
 ``core.tab`` tsv outfile from snippy-core  
