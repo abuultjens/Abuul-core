@@ -85,7 +85,7 @@ done
 paste ${INFILE} ${RAND}_CONSEQUENCE.txt > ${OUTFILE}
 
 # rm tmp files
-cp ${RAND}_DB.txt DB.txt
+#cp ${RAND}_DB.txt DB.txt
 rm ${RAND}_*
 
 
