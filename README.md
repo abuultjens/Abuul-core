@@ -17,30 +17,30 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 ### run snippy-core
 ``$ snippy-core --prefix test --ref ref.gbk isolate_1 isolate_2 isolate_3``  
 ``$ head test.tab``  
-``CHR     POS     REF     2009-05176      2009-06134      2011-07041``  
-``aus0085 6458    G       T       G       G``  
-``aus0085 6459    A       T       A       A``  
-``aus0085 156753  C       T       A       C``  
-``aus0085 169362  G       G       T       G``  
-``aus0085 183077  G       A       G       G``  
-``aus0085 192469  C       A       C       C``  
-``aus0085 206613  C       T       C       C``  
-``aus0085 217723  C       A       C       C``  
-``aus0085 228727  C       C       C       T``  
+``CHR     POS     REF     U6164036        U8294222        U9052080``  
+``aus0085 6458    G       G       T       T``  
+``aus0085 6459    A       A       T       T``  
+``aus0085 156753  C       C       T       T``  
+``aus0085 183077  G       G       A       A``  
+``aus0085 189748  T       G       G       G``  
+``aus0085 206613  C       C       T       T``  
+``aus0085 217723  C       C       A       A``  
+``aus0085 232690  G       G       A       A``  
+``aus0085 533743  T       T       C       C``  
 
 ### run Abuul-core
 ``sh Abuul-core.sh test.tab test_consequences.tab``  
-``$ head test_consequences.tab``  
-``CHR     POS     REF     2009-05176      2009-06134      2011-07041      NUMBER_OF_CONSEQUENCES  CONSEQUENCE``  
-``aus0085 6458    G       T       G       G       1       [CONSEQUENCE:missense_variant c.251_252delGAinsTT p.Arg84Ile,aus0085_chr_p1-6.fna_00006]``  
-``aus0085 6459    A       T       A       A       1       VARIANT_NOT_FOUND_IN_snps.csv``  
-``aus0085 156753  C       T       A       C       2       [CONSEQUENCE:missense_variant c.1028C>A p.Ser343Asn,aus0085_chr_p1-``6.fna_00162]_CONSEQUENCE:missense_variant c.1028C>T p.Ser343Asn,aus0085_chr_p1-6.fna_00162]``  
-``aus0085 169362  G       G       T       G       1       [CONSEQUENCE:missense_variant c.305G>T p.Gly102Val,aus0085_chr_p1-6.fna_00174]``  
-``aus0085 183077  G       A       G       G       1       [CONSEQUENCE:]``  
-``aus0085 192469  C       A       C       C       1       [CONSEQUENCE:missense_variant c.2186C>A p.Pro729His,aus0085_chr_p1-6.fna_00193]``  
-``aus0085 206613  C       T       C       C       1       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val,aus0085_chr_p1-6.fna_00205]``  
-``aus0085 217723  C       A       C       C       1       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe,aus0085_chr_p1-6.fna_00217]``  
-``ref 228727  C       C       C       T       1       [CONSEQUENCE:stop_gained c.443G>A p.Trp148*,aus0085_chr_p1-6.fna_00228]``  
+``$ head test_consequences.tab ``  
+``CHR     POS     REF     U6164036        U8294222        U9052080        NUMBER_OF_CONSEQUENCES  CONSEQUENCE``  
+``aus0085 6458    G       G       T       T       1       [CONSEQUENCE:missense_variant c.251_252delGAinsTT p.Arg84Ile,aus0085_chr_p1-6.fna_00006]``  
+``aus0085 6459    A       A       T       T       1       VARIANT_NOT_FOUND_IN_snps.csv``  
+``aus0085 156753  C       C       T       T       1       [CONSEQUENCE:missense_variant c.1028G>A p.Ser343Asn,aus0085_chr_p1-6.fna_00162]``  
+``aus0085 183077  G       G       A       A       1       [CONSEQUENCE:]``  
+``aus0085 189748  T       G       G       G       1       [CONSEQUENCE:]``  
+``aus0085 206613  C       C       T       T       1       [CONSEQUENCE:missense_variant c.860C>T p.Ala287Val,aus0085_chr_p1-6.fna_00205]``  
+``aus0085 217723  C       C       A       A       1       [CONSEQUENCE:missense_variant c.859G>T p.Val287Phe,aus0085_chr_p1-6.fna_00217]``  
+``aus0085 232690  G       G       A       A       1       [CONSEQUENCE:synonymous_variant c.720C>T p.Ile240Ile,aus0085_chr_p1-6.fna_00233]``  
+``aus0085 533743  T       T       C       C       2       [CONSEQUENCE:synonymous_variant c.60T>C p.Cys20Cys]_CONSEQUENCE:synonymous_variant c.60_67delTGGAGCACinsCGGAGCAT p.24]``  
 
 
 
