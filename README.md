@@ -52,7 +52,7 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
 
 * Note that position 533,743 is reported with two consequences, one for each allele.
 
-* Some SNP positions that are listed in the snippy-core tsv and csv outfiles don't feature in the snps.csv files in the individual snippy output dirs. In these instances 'VARIANT_NOT_FOUND_IN_snps.csv' is reported in the consequences column (Eg. position 6459).
+* Some SNP positions listed in the snippy-core tsv and csv outfiles don't feature in the snps.csv files in the individual snippy output dirs. In these instances 'VARIANT_NOT_FOUND_IN_snps.csv' is reported in the consequences column (Eg. position 6459).
 
 
 
