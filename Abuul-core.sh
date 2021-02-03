@@ -72,6 +72,7 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 	echo "${WC}	${CONSEQUENCE}" >> ${RAND}_CONSEQUENCE.txt
 done
 
+echo "Writing outfile as ${OUTFILE}"
 paste ${INFILE} ${RAND}_CONSEQUENCE.txt > ${OUTFILE}
 
 # rm tmp files
