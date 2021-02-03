@@ -15,7 +15,7 @@ echo "Making index"
 tail -n +2 ${INFILE} | cut -f 1-2 | tr '\t' '_' > ${RAND}_INDEX.txt
 
 echo "Making database"
-# make list of isolates in snps.tab file
+# make list of isolates in snippy-core tab file
 head -1 ${INFILE} | cut -f 4- | tr '\t' '\n' > ${RAND}_isolates_list.txt
 # make db from snps.tab from each isolate folder
 for ISOLATE in $(cat ${RAND}_isolates_list.txt); do
@@ -38,39 +38,29 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 		# if number of consequences is one
                 if [ "${WC}" == "1" ]; then
 			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
-			#ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
 			CONSEQUENCE=ALLELE-1:[${CONSEQUENCE_TMP}]
                 fi 
 		
 		# if number of consequences is two
 		if [ "${WC}" == "2" ]; then
-			#FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
 			FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -1 | tail -1`
-			#SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
 			SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -2 | tail -1`
 			CONSEQUENCE=ALLELE-1:[${FIRST_CONSEQUENCE}]_ALLELE-2:[${SECOND_CONSEQUENCE}]
 		fi
 		
 		# if number of consequences is three
 		if [ "${WC}" == "3" ]; then
-                        #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
                         FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -1 | tail -1`
-                        #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
                         SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -2 | tail -1`
-                        #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
                         THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -3 | tail -1`
 			CONSEQUENCE=ALLELE-1:[${FIRST_CONSEQUENCE}]_ALLELE-2:[${SECOND_CONSEQUENCE}]_ALLELE-3:[${THIRD_CONSEQUENCE}]
 		fi
 		
 		# if number of consequences is four
                 if [ "${WC}" == "4" ]; then
-                        #FIRST_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -1 | tail -1 | cut -f 4 -d ','`
                         FIRST_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -1 | tail -1`
-                        #SECOND_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -2 | tail -1 | cut -f 4 -d ','`
                         SECOND_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -2 | tail -1`
-                        #THIRD_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -3 | tail -1 | cut -f 4 -d ','`
                         THIRD_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -3 | tail -1`
-			#FOURTH_ALLELE=`grep ^"${INDEX}," ${RAND}_DB.txt | head -4 | tail -1 | cut -f 4 -d ','`
                         FOURTH_CONSEQUENCE=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -4 | tail -1`
 			CONSEQUENCE=ALLELE-1:[${FIRST_CONSEQUENCE}]_ALLELE-2:[${SECOND_CONSEQUENCE}_ALLELE-3:[${THIRD_CONSEQUENCE}_ALLELE-4:[${FOURTH_CONSEQUENCE}]
                 fi
