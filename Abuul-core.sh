@@ -11,7 +11,7 @@ RAND_3=`echo $((200 + RANDOM % 300))`
 RAND=`echo "${RAND_1}${RAND_2}${RAND_3}"`
 
 echo "Making index"
-# make ele_pos index from snps.tab file
+# make ele_pos index from snippy-core tab file
 tail -n +2 ${INFILE} | cut -f 1-2 | tr '\t' '_' > ${RAND}_INDEX.txt
 
 echo "Making database"
