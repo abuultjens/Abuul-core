@@ -8,8 +8,8 @@ Provides SNP consequences for the core.tab file from snippy-core. Consequences a
     $ sh Abuul-core/Abuul-core.sh [core.tab] [core_with_consequences.tab]
 
 ##### arguments: 
-``core.tab`` tsv outfile from snippy-core  
-``core_with_consequences.tab`` outfile from Abuul-core  
+``core.tab`` infile tsv from snippy-core  
+``core_with_consequences.tab`` outfile name  
 
 # Example
 
