@@ -19,8 +19,8 @@ echo "Making database"
 head -1 ${INFILE} | cut -f 4- | tr '\t' '\n' > ${RAND}_isolates_list.txt
 # make db from snps.tab from each isolate folder
 for ISOLATE in $(cat ${RAND}_isolates_list.txt); do
-	tail -n +2 ${ISOLATE}/snps.csv | cut -f 1-2 -d ',' | tr ',' '_' >> ${RAND}_index_tmp.txt
-	tail -n +2 ${ISOLATE}/snps.csv | cut -f 3- -d ',' >> ${RAND}_db_tmp.txt
+	tail -n +2 ${ISOLATE}/*.csv | cut -f 1-2 -d ',' | tr ',' '_' >> ${RAND}_index_tmp.txt
+	tail -n +2 ${ISOLATE}/*.csv | cut -f 3- -d ',' >> ${RAND}_db_tmp.txt
 done
 paste ${RAND}_index_tmp.txt ${RAND}_db_tmp.txt | tr '\t' ',' > ${RAND}_DB.txt
 
@@ -37,7 +37,7 @@ for INDEX in $(cat ${RAND}_INDEX.txt); do
 		
 		# if number of consequences is one
                 if [ "${WC}" == "1" ]; then
-			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-11 -d ',' | sort | uniq | head -1 | tail -1`
+			CONSEQUENCE_TMP=`grep ^"${INDEX}," ${RAND}_DB.txt | cut -f 10-13 -d ',' | sort | uniq | head -1 | tail -1`
 			CONSEQUENCE=ALLELE-1:[${CONSEQUENCE_TMP}]
                 fi 
 		
